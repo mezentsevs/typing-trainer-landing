@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  }
+  
+  body {
+    @apply antialiased bg-white dark:bg-gray-950 transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 dark:bg-gray-900/10 backdrop-blur-md border border-white/20 dark:border-gray-700/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 via-purple-600 to-blue-600 bg-clip-text text-transparent;
+  }
+  
+  .magnetic-hover {
+    @apply transition-transform duration-300 ease-out hover:scale-105;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
