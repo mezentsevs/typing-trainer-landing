@@ -5,7 +5,8 @@ export default {
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
-    "./app.vue"
+    "./app.vue",
+    "./error.vue"
   ],
   darkMode: 'class',
   theme: {
@@ -14,7 +15,8 @@ export default {
         'gradient': 'gradient 8s linear infinite',
         'float': 'float 6s ease-in-out infinite',
         'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.6s ease-out'
+        'slide-up': 'slideUp 0.6s ease-out',
+        'pulse-slow': 'pulse 6s ease-in-out infinite',
       },
       keyframes: {
         gradient: {
@@ -38,6 +40,10 @@ export default {
         slideUp: {
           '0%': { transform: 'translateY(30px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' }
+        },
+        pulse: {
+          '0%, 100%': { opacity: '0.7' },
+          '50%': { opacity: '1' }
         }
       },
       colors: {

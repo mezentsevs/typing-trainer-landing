@@ -12,11 +12,11 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en'
       },
-      title: 'Typing Trainer - Master Touch Typing',
+      title: 'Typing Trainer',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'A full-stack SPA typing trainer for mastering touch-typing.' }
+        { name: 'description', content: 'A typing trainer for mastering blind typing.' }
       ]
     }
   }
