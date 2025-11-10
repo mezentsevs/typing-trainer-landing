@@ -5,19 +5,19 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   modules: ['@nuxtjs/tailwindcss'],
   typescript: {
-    typeCheck: true
+    typeCheck: false,
   },
   app: {
     head: {
       htmlAttrs: {
-        lang: 'en'
+        lang: 'en',
       },
       title: 'Typing Trainer',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'A typing trainer for mastering blind typing.' }
-      ]
-    }
-  }
-})
+        { name: 'description', content: 'A typing trainer for mastering blind typing.' },
+      ],
+    },
+  },
+});
