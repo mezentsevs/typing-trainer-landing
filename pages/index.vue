@@ -4,7 +4,7 @@
         <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
             <div class="container mx-auto px-6 text-center z-10">
                 <h1 class="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6">
-                    <span>{{ currentText }}</span>
+                    <span>{{ currentTypingText }}</span>
                     <span
                         class="typing-cursor ml-1 inline-block h-[1em] border-solid border-r-[0.05em] border-r-gray-800 dark:border-r-white align-middle" />
                 </h1>
@@ -26,31 +26,31 @@
 <script setup lang="ts">
 import { APP_NAME, APP_SLOGAN } from '@/constants/app';
 
-const currentText: Ref<string> = ref('');
+const currentTypingText: Ref<string> = ref('');
 
 let typingAnimationInterval: ReturnType<typeof setInterval> | null = null;
 let typingAnimationTimeout: ReturnType<typeof setTimeout> | null = null;
-let i: number = 0;
-let isCurrentTextDeleting: boolean = false;
+let currentTypingIndex: number = 0;
+let isCurrentTypingTextDeleting: boolean = false;
 
 const runTypingAnimation = (): void => {
     typingAnimationInterval = setInterval((): void => {
-        if (!isCurrentTextDeleting) {
-            if (i < APP_NAME.length) {
-                currentText.value += APP_NAME[i];
-                i++;
+        if (!isCurrentTypingTextDeleting) {
+            if (currentTypingIndex < APP_NAME.length) {
+                currentTypingText.value += APP_NAME[currentTypingIndex];
+                currentTypingIndex++;
             } else {
                 typingAnimationTimeout = setTimeout((): void => {
-                    isCurrentTextDeleting = true;
+                    isCurrentTypingTextDeleting = true;
                     typingAnimationTimeout = null;
                 }, 2000);
             }
         } else {
-            if (currentText.value.length > 0) {
-                currentText.value = currentText.value.slice(0, -1);
+            if (currentTypingText.value.length > 0) {
+                currentTypingText.value = currentTypingText.value.slice(0, -1);
             } else {
-                isCurrentTextDeleting = false;
-                i = 0;
+                isCurrentTypingTextDeleting = false;
+                currentTypingIndex = 0;
             }
         }
     }, 100);
