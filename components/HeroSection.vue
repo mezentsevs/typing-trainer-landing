@@ -18,7 +18,6 @@
 
 <script setup lang="ts">
 import { APP_NAME, APP_SLOGAN, APP_URL } from '@/constants/app';
-import PrimaryButton from '@/components/uikit/PrimaryButton.vue';
 
 const currentTypingText: Ref<string> = ref('');
 

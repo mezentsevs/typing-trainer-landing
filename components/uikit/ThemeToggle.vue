@@ -15,9 +15,6 @@
 </template>
 
 <script setup lang="ts">
-import ThemeDarkIcon from '@/components/icons/ThemeDarkIcon.vue';
-import ThemeLightIcon from '@/components/icons/ThemeLightIcon.vue';
-
 const isDark: Ref<boolean> = ref(false);
 
 const toggleTheme = (): void => {
