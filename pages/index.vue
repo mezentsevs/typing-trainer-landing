@@ -20,6 +20,8 @@
                 </div>
             </div>
         </section>
+
+        <FeaturesSection />
     </div>
 </template>
 
