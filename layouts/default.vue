@@ -54,6 +54,7 @@ const navLinks: Array<{ href: string; text: string }> = [
     { href: '#features', text: 'Features' },
     { href: '#demo', text: 'Demo' },
     { href: '#stats', text: 'Stats' },
+    { href: '#pricing', text: 'Pricing' },
 ];
 
 const floatingCircles: Array<{ class: string }> = [
