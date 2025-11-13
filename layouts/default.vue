@@ -16,21 +16,9 @@
 
                     <!-- Navigation -->
                     <div class="hidden md:flex items-center space-x-8">
-                        <a
-                            href="#features"
-                            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors duration-200 font-medium">
-                            Features
-                        </a>
-                        <a
-                            href="#demo"
-                            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors duration-200 font-medium">
-                            Demo
-                        </a>
-                        <a
-                            href="#stats"
-                            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors duration-200 font-medium">
-                            Stats
-                        </a>
+                        <NavigationLink v-for="link in navLinks" :key="link.href" :href="link.href">
+                            {{ link.text }}
+                        </NavigationLink>
                     </div>
 
                     <!-- CTA & Theme Toggle -->
@@ -62,7 +50,15 @@
 </template>
 
 <script setup lang="ts">
-const floatingCircles: Record<string, string>[] = [
+import NavigationLink from '@/components/NavigationLink.vue';
+
+const navLinks: Array<{ href: string; text: string }> = [
+    { href: '#features', text: 'Features' },
+    { href: '#demo', text: 'Demo' },
+    { href: '#stats', text: 'Stats' },
+];
+
+const floatingCircles: Array<{ class: string }> = [
     { class: 'top-10 left-10 w-24 h-24 bg-blue-300/70 dark:bg-cyan-500' },
     { class: 'bottom-20 right-20 w-32 h-32 bg-fuchsia-300/70 dark:bg-purple-500 delay-1000' },
     { class: 'top-1/2 left-1/4 w-16 h-16 bg-rose-300/70 dark:bg-red-500 delay-500' },
