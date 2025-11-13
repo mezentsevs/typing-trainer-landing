@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-const floatingCircles = [
+const floatingCircles: Record<string, string>[] = [
     { class: 'top-10 left-10 w-24 h-24 bg-blue-300/70 dark:bg-cyan-500' },
     { class: 'bottom-20 right-20 w-32 h-32 bg-fuchsia-300/70 dark:bg-purple-500 delay-1000' },
     { class: 'top-1/2 left-1/4 w-16 h-16 bg-rose-300/70 dark:bg-red-500 delay-500' },
