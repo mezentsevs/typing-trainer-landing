@@ -24,11 +24,9 @@
                     <!-- CTA & Theme Toggle -->
                     <div class="flex items-center space-x-4">
                         <ThemeToggle />
-                        <a
-                            href="https://app.typingtrainer.com"
-                            class="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-mono rounded-lg transition-all duration-200 hover:shadow-lg hover:from-blue-700 hover:to-purple-700 active:shadow-2xl active:from-blue-800 active:to-purple-800 active:shadow-blue-500/50">
+                        <PrimaryButton :href="APP_URL" class="px-6 py-2 font-mono">
                             Launch App
-                        </a>
+                        </PrimaryButton>
                     </div>
                 </div>
             </nav>
@@ -50,7 +48,9 @@
 </template>
 
 <script setup lang="ts">
+import { APP_URL } from '@/constants/app';
 import NavigationLink from '@/components/NavigationLink.vue';
+import PrimaryButton from '@/components/PrimaryButton.vue';
 
 const navLinks: Array<{ href: string; text: string }> = [
     { href: '#features', text: 'Features' },
