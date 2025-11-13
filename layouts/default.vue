@@ -49,8 +49,9 @@
 
 <script setup lang="ts">
 import { APP_URL } from '@/constants/app';
-import NavigationLink from '@/components/NavigationLink.vue';
-import PrimaryButton from '@/components/PrimaryButton.vue';
+import NavigationLink from '@/components/uikit/NavigationLink.vue';
+import PrimaryButton from '@/components/uikit/PrimaryButton.vue';
+import ThemeToggle from '@/components/uikit/ThemeToggle.vue';
 
 const navLinks: Array<{ href: string; text: string }> = [
     { href: '#features', text: 'Features' },
