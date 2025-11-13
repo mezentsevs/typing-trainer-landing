@@ -7,6 +7,12 @@ export default defineNuxtConfig({
     typescript: {
         typeCheck: false,
     },
+    components: [
+        {
+            path: '~/components',
+            pathPrefix: false,
+        },
+    ],
     app: {
         head: {
             htmlAttrs: {
