@@ -4,4 +4,5 @@
     <DemoSection />
     <StatsSection />
     <PricingSection />
+    <BenefitsSection />
 </template>
