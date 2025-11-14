@@ -5,4 +5,5 @@
     <StatsSection />
     <PricingSection />
     <BenefitsSection />
+    <FooterSection />
 </template>
