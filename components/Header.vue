@@ -29,12 +29,11 @@
 
 <script setup lang="ts">
 import { APP_NAME, APP_URL } from '@/constants/app';
+import type { Link } from '@/interfaces/navigation';
 
-const navLinks: Array<{ href: string; text: string }> = [
-    { href: '#features', text: 'Features' },
-    { href: '#demo', text: 'Demo' },
-    { href: '#stats', text: 'Stats' },
-    { href: '#pricing', text: 'Pricing' },
-    { href: '#benefits', text: 'Benefits' },
-];
+interface HeaderProps {
+    navLinks: Link[];
+}
+
+defineProps<HeaderProps>();
 </script>

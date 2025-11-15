@@ -48,25 +48,15 @@
 </template>
 
 <script setup lang="ts">
-import { APP_NAME, APP_SLOGAN, APP_URL, APP_SUPPORT_EMAIL } from '@/constants/app';
+import { APP_NAME, APP_SLOGAN } from '@/constants/app';
+import type { Link } from '@/interfaces/navigation';
 
-interface Link {
-    href: string;
-    text: string;
+interface FooterProps {
+    quickLinks: Link[];
+    contactLinks: Link[];
 }
 
-const quickLinks: Link[] = [
-    { href: '#features', text: 'Features' },
-    { href: '#demo', text: 'Demo' },
-    { href: '#stats', text: 'Stats' },
-    { href: '#pricing', text: 'Pricing' },
-    { href: '#benefits', text: 'Benefits' },
-];
-
-const contactLinks: Link[] = [
-    { href: `mailto:${APP_SUPPORT_EMAIL}`, text: APP_SUPPORT_EMAIL },
-    { href: APP_URL, text: 'Launch Application' },
-];
+defineProps<FooterProps>();
 
 const currentYear: number = new Date().getFullYear();
 </script>

@@ -1,13 +1,13 @@
 <template>
     <div
         class="min-h-screen bg-gradient-to-br from-blue-100 via-white to-purple-50 dark:from-gray-900 dark:via-blue-950 dark:to-purple-950 transition-colors duration-300">
-        <Header />
+        <Header :nav-links="navLinks" />
 
         <main>
             <slot />
         </main>
 
-        <Footer />
+        <Footer :quick-links="quickLinks" :contact-links="contactLinks" />
 
         <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
             <div
@@ -20,6 +20,22 @@
 </template>
 
 <script setup lang="ts">
+import type { Link } from '@/interfaces/navigation';
+
+interface RouteMeta {
+    navLinks?: Link[];
+    quickLinks?: Link[];
+    contactLinks?: Link[];
+}
+
+const route = useRoute();
+
+const pageMeta: ComputedRef<RouteMeta> = computed((): RouteMeta => (route.meta as RouteMeta) || {});
+
+const navLinks: ComputedRef<Link[]> = computed((): Link[] => pageMeta.value.navLinks || []);
+const quickLinks: ComputedRef<Link[]> = computed((): Link[] => pageMeta.value.quickLinks || []);
+const contactLinks: ComputedRef<Link[]> = computed((): Link[] => pageMeta.value.contactLinks || []);
+
 const floatingCircles: Array<{ class: string }> = [
     { class: 'top-10 left-10 w-24 h-24 bg-blue-300/70 dark:bg-cyan-500' },
     { class: 'bottom-20 right-20 w-32 h-32 bg-fuchsia-300/70 dark:bg-purple-500 delay-1000' },
