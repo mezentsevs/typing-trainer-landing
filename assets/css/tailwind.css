@@ -26,17 +26,3 @@
     @apply transition-transform duration-300 ease-out hover:scale-105;
   }
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  
-  .perspective-1000 {
-    perspective: 1000px;
-  }
-  
-  .transform-style-preserve-3d {
-    transform-style: preserve-3d;
-  }
-}
