@@ -4,7 +4,7 @@
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg" />
+                    <LogoIcon class="w-8 h-8 text-blue-500 dark:text-blue-600" />
                     <span class="text-xl font-mono font-bold text-gray-800 dark:text-white">
                         {{ APP_NAME }}
                     </span>

@@ -4,8 +4,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
                     <div class="flex items-center space-x-3 mb-4">
-                        <div
-                            class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg" />
+                        <LogoIcon class="w-8 h-8 text-blue-500 dark:text-blue-600" />
                         <span class="text-xl font-mono font-bold text-gray-800 dark:text-white">
                             {{ APP_NAME }}
                         </span>
