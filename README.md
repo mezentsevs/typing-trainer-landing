@@ -7,7 +7,7 @@ Please be aware that this project might transition to a commercial subscription-
 
 This is a typing trainer landing, written in and for educational and demonstrational purposes.
 
-Landing page for 'Typing trainer' - static website presenting the typing trainer application. Contains the source code and build configuration for the project's landing page.
+A landing page for 'Typing trainer' - static website presenting the typing trainer application. Contains the source code and build configuration for the project's landing page.
 
 Based on tech stack:
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML),
