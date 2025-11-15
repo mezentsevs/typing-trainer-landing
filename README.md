@@ -9,7 +9,16 @@ This is a typing trainer landing, written in and for educational and demonstrati
 
 Landing page for 'Typing trainer' - static website presenting the typing trainer application. Contains the source code and build configuration for the project's landing page.
 
-## Nuxt Minimal Starter
+Based on tech stack:
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML),
+- [TypeScript](https://www.typescriptlang.org),
+- [Nuxt](https://nuxt.com),
+- [Vue](https://vuejs.org),
+- [Vue Router](https://router.vuejs.org/),
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),
+- [TailwindCss](https://tailwindcss.com).
+
+## Getting Started (Nuxt Minimal Starter)
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
