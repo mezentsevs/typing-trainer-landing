@@ -23,20 +23,7 @@
 
 <script setup lang="ts">
 import { APP_URL } from '@/constants/app';
-
-interface PricingPlan {
-    id: number;
-    name: string;
-    price: string;
-    originalPrice?: string;
-    description: string;
-    features: string[];
-    ctaText: string;
-    ctaHref: string;
-    popular?: boolean;
-    accentColor: string;
-    billingPeriod: string;
-}
+import type { PricingPlan } from '@/interfaces/pricing';
 
 const pricingPlans: PricingPlan[] = [
     {

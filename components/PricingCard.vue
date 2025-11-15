@@ -66,19 +66,7 @@
 </template>
 
 <script setup lang="ts">
-interface PricingPlan {
-    id: number;
-    name: string;
-    price: string;
-    originalPrice?: string;
-    description: string;
-    features: string[];
-    ctaText: string;
-    ctaHref: string;
-    popular?: boolean;
-    accentColor: string;
-    billingPeriod: string;
-}
+import type { PricingPlan } from '@/interfaces/pricing';
 
 interface PricingCardProps {
     plan: PricingPlan;
