@@ -3,7 +3,7 @@
         class="group glass rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl border border-white/20 dark:border-gray-700/20 text-center magnetic-hover">
         <div
             class="w-16 h-16 rounded-full bg-gradient-to-r mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-            :class="stat.accentColor">
+            :class="accentGradient">
             <span class="text-2xl font-bold text-white">{{ stat.value }}</span>
         </div>
 
@@ -19,11 +19,22 @@
 </template>
 
 <script setup lang="ts">
+import { StatColorScheme } from '@/enums/stats';
 import type { Stat } from '@/interfaces/stats';
 
 interface StatsCardProps {
     stat: Stat;
+    colorScheme: StatColorScheme;
 }
 
-defineProps<StatsCardProps>();
+const props = defineProps<StatsCardProps>();
+
+const gradientMap: Record<StatColorScheme, string> = {
+    [StatColorScheme.Blue]: 'from-blue-500 to-cyan-500',
+    [StatColorScheme.Purple]: 'from-purple-500 to-fuchsia-500',
+    [StatColorScheme.Green]: 'from-green-500 to-emerald-500',
+    [StatColorScheme.Orange]: 'from-orange-500 to-red-500',
+};
+
+const accentGradient: ComputedRef<string> = computed((): string => gradientMap[props.colorScheme]);
 </script>

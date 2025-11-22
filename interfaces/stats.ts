@@ -3,5 +3,4 @@ export interface Stat {
     value: string;
     label: string;
     description: string;
-    accentColor: string;
 }
