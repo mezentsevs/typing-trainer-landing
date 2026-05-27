@@ -106,6 +106,13 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 <img width="1920" height="1200" alt="2025-11-15_15-52-36" src="https://github.com/user-attachments/assets/885689bc-1a86-442d-8c6b-7f7cecbd0517" />
 <img width="1920" height="1200" alt="2025-11-15_15-53-35" src="https://github.com/user-attachments/assets/def79836-eefc-468f-8304-a689f5c49427" />
 
+## ⭐ If You Found This Useful
+
+If this project helped you - whether it saved you time, taught you something, or gave you an idea - please consider leaving a star or a like.
+A ⭐, 👍, ❤️, or 💎 tells me that the work matters. It's a small gesture that genuinely fuels my motivation to keep improving the project and building new tools.
+
+Thanks for your interest in this project!
+
 ## License
 
 The 'Typing trainer landing' is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
