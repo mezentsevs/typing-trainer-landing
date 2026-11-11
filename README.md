@@ -1,5 +1,7 @@
 # Typing trainer landing
 
+<img width="2736" height="1520" alt="653f3b0b70574f6c92d8f072db9877f6" src="https://github.com/user-attachments/assets/1c4fe67c-8f4c-47be-bcd2-591e6a17d373" />
+
 ## About 'Typing trainer landing'
 
 This is a typing trainer landing, written in and for educational and demonstrational purposes.
